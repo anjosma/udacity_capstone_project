@@ -1,0 +1,13 @@
+aws:
+  region: us-west-2
+  s3:
+    bucket: udacity-dend
+    log_data_key: log_data
+    song_data_key: song_data/A/A/A
+  redshift:
+    database: dev
+    schema: public
+
+airflow:
+  redshift_conn_id: redshift
+  aws_credentials_id: aws_credentials
