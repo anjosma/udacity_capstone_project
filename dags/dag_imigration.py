@@ -1,14 +1,14 @@
 from datetime import datetime, timedelta
-import os
+import os, sys
+sys.path.insert(0, os.getcwd())
 
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
-from airflow.providers.amazon.aws.operators.emr_create_job_flow import EmrCreateJobFlowOperator
-from airflow.providers.amazon.aws.sensors.emr_job_flow import EmrJobFlowSensor
+from airflow.operators.python_operator import PythonOperator
+
+from plugins.utils import load_yml_config
 
 import logging
-
-from utils import load_yml_config
 
 config = load_yml_config( os.path.join("config", 'etl.yml') )
 

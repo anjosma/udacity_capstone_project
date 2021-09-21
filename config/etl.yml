@@ -1,9 +1,11 @@
 aws:
   region: us-west-2
   s3:
-    bucket: udacity-dend
-    log_data_key: log_data
-    song_data_key: song_data/A/A/A
+    input_bucket: s3a://immigration-capstone-project
+    output_bucket: s3a://immigration-capstone-project-output
+    immigration_data_key: immigration/*.sas7bdat
+    airport_data_key: airport/airport-codes_csv.csv
+    demographics_data_key: demographics/us-cities-demographics.csv
   redshift:
     database: dev
     schema: public
