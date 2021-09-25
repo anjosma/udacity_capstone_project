@@ -6,6 +6,7 @@ aws:
     immigration_data_key: immigration/*.sas7bdat
     airport_data_key: airport/airport-codes_csv.csv
     demographics_data_key: demographics/us-cities-demographics.csv
+    temperatures_data_key: temperatures/GlobalLandTemperaturesByCity.csv
   redshift:
     database: dev
     schema: public
