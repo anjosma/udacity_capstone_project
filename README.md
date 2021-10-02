@@ -3,6 +3,7 @@ This is the last project of six from Udacity Nanodegree Data Engineering Program
 
 # Scope
 This project aims to prepare datasets for ELT (Extract, Load and Transform) in a Datalake using PySpark and Pandas to ensure data quality for all the information processed in the datasets. For this, we will use Jupyter Notebook to explore the datasets, PySpark to process high volume of data. The scripts written on this project has as the main goal creates a analytical visualization for the datasets to make data available for a Data Science Team for studies cases and to make it easier for Business Teams to create their own Business Intelligence Visualization.
+With the data available here we can answare questions about immigration in USA, like: the most popular cities, races in each state, gender distribution, median age, birthyear of new immigration, etc. Otherwise we can also understand the relation of high temperatures with the arrive of latin america in United States.
 
 # Datasets
 The following datasets will be used on this project:
@@ -63,6 +64,10 @@ This data comes from the US National Tourism and Trade Office. A data dictionary
 
 # Explore and Access Data
 These steps are included in `notebook/Capstone Project.ipynb`.
+
+# Model data
+The model data used here is the Star Schema. It was choose because we have a 'main' table: Immigration and we also have assistants tables to support us and to create a relationship with that table, as: Airport, Temperatures and Demographics data. The datas are denormalized, because we want the data in a analytics form, to make it easier to another teams to use the data. If we use that data normalized, it could be tough to other teams to make their own queries and understand the tables.
+The Star Schema also make it easier to write new queries, for better perfomances and to use it and achieve business insights.
 
 # Run the code
 The process is composed by two scripts:

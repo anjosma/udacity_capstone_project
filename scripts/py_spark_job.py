@@ -128,6 +128,7 @@ def prepare_temperatures_data():
         StructField('AverageTemperature', DoubleType()),
         StructField('AverageTemperatureUncertainty', DoubleType()),
         StructField('City', StringType()),
+        StructField('Country', StringType()),
         StructField('Latitude', StringType()),
         StructField('Longitude', StringType())
     ])

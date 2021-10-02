@@ -1,16 +1,6 @@
-aws:
-  region: us-west-2
-  s3:
-    input_bucket: s3a://immigration-capstone-project
-    output_bucket: s3a://immigration-capstone-project-output
-    immigration_data_key: immigration/*.sas7bdat
-    airport_data_key: airport/airport-codes_csv.csv
-    demographics_data_key: demographics/us-cities-demographics.csv
-    temperatures_data_key: temperatures/GlobalLandTemperaturesByCity.csv
-  redshift:
-    database: dev
-    schema: public
-
-airflow:
-  redshift_conn_id: redshift
-  aws_credentials_id: aws_credentials
+data:
+    output_bucket: ./data/out
+    immigration_data_key: /data/18-83510-I94-Data-2016/i94_apr16_sub.sas7bdat
+    airport_data_key: ./data/in/airport/airport-codes_csv.csv
+    demographics_data_key: ./data/in/demographics/us-cities-demographics.csv
+    temperatures_data_key: /data2/GlobalLandTemperaturesByCity.csv
